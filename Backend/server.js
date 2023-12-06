@@ -20,6 +20,10 @@ mongoose
   .then(() => console.log("connected"))
   .catch(() => console.log("error connecting"));
 
+app.get("/",(req,res)=>{
+  res.send("Greetings!")
+})
+
 app.get("/chart", function (req, res) {
   userModel
     .find({})
