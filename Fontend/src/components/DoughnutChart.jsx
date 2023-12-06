@@ -13,9 +13,11 @@ const DoughnutChart = () => {
     options[3],
   ]);
   useEffect(() => {
-    axios.get("http://localhost:3000/chart/pestle").then((response) => {
-      setUserData(response.data);
-    });
+    axios
+      .get("https://visdashboard.onrender.com/chart/pestle")
+      .then((response) => {
+        setUserData(response.data);
+      });
   }, []);
 
   const radar = React.useRef();

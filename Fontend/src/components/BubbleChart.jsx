@@ -12,7 +12,7 @@ const BubbleChart = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/chart/bubble", {
+      .get("https://visdashboard.onrender.com/chart/bubble", {
         params: {
           region: region,
           country: country,

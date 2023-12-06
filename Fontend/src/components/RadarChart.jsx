@@ -9,7 +9,7 @@ const RadarChart = () => {
   const [pestle, setPestle] = useState("Economic");
   useEffect(() => {
     axios
-      .get("http://localhost:3000/chart/radar", {
+      .get("https://visdashboard.onrender.com/chart/radar", {
         params: {
           pestle: pestle,
         },

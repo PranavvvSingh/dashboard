@@ -9,7 +9,7 @@ const BoxPlot = () => {
   const [topic, setTopic] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:3000/chart/boxplot", {
+      .get("https://visdashboard.onrender.com/chart/boxplot", {
         params: {
           topic: topic,
         },

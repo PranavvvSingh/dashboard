@@ -5,10 +5,12 @@ import Chart from "chart.js/auto";
 const BarChart = () => {
   const [userData, setUserData] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:3000/chart/bar").then((response) => {
-      setUserData(response.data);
-      console.log(response.data)
-    });
+    axios
+      .get("https://visdashboard.onrender.com/chart/bar")
+      .then((response) => {
+        setUserData(response.data);
+        console.log(response.data);
+      });
   }, []);
 
   const data = {
