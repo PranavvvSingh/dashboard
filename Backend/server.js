@@ -20,21 +20,6 @@ mongoose
   .then(() => console.log("connected"))
   .catch(() => console.log("error connecting"));
 
-app.get("/",(req,res)=>{
-  res.send("Greetings!")
-})
-
-app.get("/chart", function (req, res) {
-  userModel
-    .find({})
-    .then(function (data) {
-      res.send(data);
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
-});
-
 app.use("/chart/bubble",bubbleRoute)
 app.use("/chart/pestle", pestleRoute);
 app.use("/chart/bar", barRoute);
